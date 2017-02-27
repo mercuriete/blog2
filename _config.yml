@@ -24,6 +24,9 @@ owner:
     disqus:
         show: true
         username: "ichihararifa"
+    linkedin:
+        show: true
+        profile: "https://linkedin.com/in/your-profile-id-here"
 sass:
     sass_dir: _sass
     style: compressed
