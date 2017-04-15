@@ -10,14 +10,14 @@ logo: jekyll-<b>materialize</b>
 paginate: 5
 paginate_path: "/page:num/"
 owner:
-    email: ichihara.rifa@gmail.com
+    email: codeharuka.yusa@gmail.com
     facebook:
         show: true
         name: "Ichihara Rifa"
-        url: "https://fb.me/nasya.aidan"
+        url: "https://fb.me/yuneharuka"
     github:
         show: true
-        username: "riefachan"
+        username: "yuune"
     twitter:
         show: false
         username: ""
