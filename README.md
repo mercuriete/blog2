@@ -2,7 +2,7 @@
 Jekyll powered blog with Google materialize css by materializecss.com
 
 ### Demo
-https://codeharuka.github.io/jekyll-materialize/
+https://yuune.github.io/jekyll-materialize/
 
 ### Usage
 [Jekyll](http://http://jekyllrb.com/)
