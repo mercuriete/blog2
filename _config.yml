@@ -1,31 +1,29 @@
 # Site settings
-title: Jekyll-materialize
+title: mercuriete's blog
 description: > # this means to ignore newlines until "baseurl:"
-    Write an awesome description for your new site here. You can edit this
-    line in _config.yml. It will appear in your document head meta (for
-    Google search results) and in your feed.xml site description.
-url: "http://yourdomain.com"
+    A blackhole of knowledge I learnt by failing in my daily life projects
+url: "https://mercuriete.github.io"
 baseurl: ""
-logo: jekyll-<b>materialize</b>
+logo: mercuriete's <b>blog</b>
 paginate: 5
 paginate_path: "/page:num/"
 owner:
-    email: codeharuka.yusa@gmail.com
+    email: mercuriete@gmail.com
     facebook:
-        show: true
-        name: "Ichihara Rifa"
-        url: "https://fb.me/yuneharuka"
+        show: false
+        name: "Mercuriete"
+        url: "https://fb.me/account"
     github:
         show: true
-        username: "yuune"
+        username: "mercuriete"
     twitter:
         show: false
         username: ""
     disqus:
-        show: true
-        username: "ichihararifa"
+        show: false
+        username: "account"
     linkedin:
-        show: true
+        show: false
         profile: "https://linkedin.com/in/your-profile-id-here"
 sass:
     sass_dir: _sass
@@ -33,5 +31,6 @@ sass:
 permalink: "/article/:title"
 markdown: redcarpet
 highlighter: pygments
-gems:
+plugins:
     - jekyll-feed
+    - jekyll-paginate

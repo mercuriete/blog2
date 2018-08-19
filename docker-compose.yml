@@ -1,11 +1,6 @@
-version: '2'
-
+version: '3'
 services:
-  'jekyll':
+  web:
     build: .
-    container_name: 'jekyll'
-    hostname: 'jekyll'
     ports:
-      - '0.0.0.0:80:4000'
-    volumes:
-      - ./:/srv/jekyll/
+     - "80:4000"
