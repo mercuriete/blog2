@@ -34,7 +34,7 @@ This automatically expands a new sentence into a new ( _NORMAL_BLOCK , FILE , LI
 The purpouse of this macro is to have more accurate line count in the memory leak reports
 
 ##### library initialization
-```
+```cpp
 int initialize_memory_leak_detector(){
    std::cout << "initializing memory leak detector" << std::endl;
    _CrtSetDbgFlag ( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
