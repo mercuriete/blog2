@@ -16,7 +16,7 @@ I created a helper to make more usable that library. I will explain it line by l
 [Memory leak detection helper](https://github.com/mercuriete/cpp-memory-leak-detection/blob/master/lib/include/memory_leak.h)
 
 ##### Preprocesor header
-```
+```cpp
 #ifndef MEMORY_LEAK_HPP
 #define MEMORY_LEAK_HPP
 #if defined(_WIN32) || defined(_WIN64)
@@ -25,7 +25,7 @@ I created a helper to make more usable that library. I will explain it line by l
 We only want to generate code in windows architectures and only when debugging.
 
 ##### macro for new expansion
-```
+```cpp
 #define DBG_NEW new ( _NORMAL_BLOCK , __FILE__ , __LINE__ )
 #define new DBG_NEW
 ```
@@ -47,7 +47,7 @@ This global variable is useless but this triggers a initialization before the ma
 This function sets debug flags according with the microsoft documentation for dump a memory leak report on exit of your application
 
 ##### at exit handler
-```
+```cpp
 void atexit_handler(){
    int result = 0;
    std::cout << "ending memory leak detector and dumping report" << std::endl;
@@ -59,7 +59,7 @@ void atexit_handler(){
    }
    //Hahahahaha exit on an exit handler!
    //feel free to blame me if you get something really bad.
-exit(result);
+   exit(result);
 }
 
 int memory_leak_dump_report_at_exit = std::atexit(atexit_handler);
@@ -96,25 +96,18 @@ with that done you will have something like this:
 
 ```
 Direct leak of 8 byte(s) in 1 object(s) allocated from:
-
  #0 0x7fb8069879f8 in operator new(unsigned long) (liblsan.so.0+0xf9f8)
-
  #1 0x40bd8c in main /app/src/main.cpp:13
-
  #2 0x7fb8060a2f44 in __libc_start_main (libc.so.6+0x21f44)
 ```
 
 then you can go to the [offending line](https://github.com/mercuriete/cpp-memory-leak-detection/blob/develop/app/src/main.cpp#L13) and check what is happening
 
-```
+```cpp
 string* leaking_pointer = new string("leaking object");
-
 //You forgot to delete pointer
-
 leaking_pointer = new string("Hello, World!");
-
 cout << *leaking_pointer << endl;
-
 delete leaking_pointer;
 ```
 
