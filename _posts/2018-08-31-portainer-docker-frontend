@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "Portainer as a docker swarm frontend"
+date:   2018-08-31 12:00:00
+categories: swarm docker portainer
+---
+Learning console commands is tedious. In this tutorial we will be using portainer to deploy complex stack with a few clicks.
+
+##### TL;DR
+```bash
+docker CACAACACACA
+
+```
+
+##### Disclaimer
+TODO
